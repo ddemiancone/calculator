@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
+  </head>
+
+  <body>
+    <div class="ct-card">
+        <div class="ct-calculator">
+          <div class="ct-title">
+            <h1 class="title">calculadora</h1>
+          </div>
+          
+          <form action name="calculator" id="calculator">
+
+            <div class="f-numbers">
+              <div class="f-first-number">
+                <label for="firstNumber">primer valor</label>
+                <input type="number" id="firstNumber" name="firstNumber" placeholder="0" autofocus>
+              </div>
+
+              <div class="f-op-symbol">
+                <input type="text" id="symbolOp" name="symbolOp" readonly>
+              </div>
+
+              <div class="f-second-number">
+                <label for="secondNumber">segundo valor</label>
+                <input type="number" id="secondNumber" name="secondNumber" placeholder="0">
+              </div>
+            </div>
+          
+            <div class="f-operations">
+              <button onclick="setSymbol(event, 'add')" id="bt-add">sumar</button>
+              <button onclick="setSymbol(event, 'substract')" id="bt-substract">restar</button>
+              <button onclick="setSymbol(event, 'multiply')" id="bt-multiply">multiplicar</button>
+              <button onclick="setSymbol(event, 'division')" id="bt-division">dividir</button>
+            </div>
+
+            <div class="f-calculate">
+              <button onclick="Calculation(event)" class="bt-calculate" title="también puedes hacerlo presionando 'enter'">calcular</button>
+            </div>
+
+            <div class="f-clear">
+              <button onclick="clearFields(event)" class="bt-clear" title="también puedes hacerlo presionando 'suprimir'">borrar</button>
+            </div>
+          </form>
+
+        
+
+          <div class="ct-result">
+            <div class="f-finalresult">
+              <label for="result">resultado</label>
+              <input type="text" id="result" name="result" readonly>
+            </div>
+          </div>
+
+        </div>
+    </div>
+  </body>
+</html>
